@@ -1,9 +1,10 @@
-#ifndef _SIMPLE_CPP_SUPPORTS__BASIC_VARIABLE_H
-#define _SIMPLE_CPP_SUPPORTS__BASIC_VARIABLE_H
+#ifndef BRH_CPP_SUPPORTS_SRC_BRH_SUPPORTS_BASIC_VARIABLE_H
+#define BRH_CPP_SUPPORTS_SRC_BRH_SUPPORTS_BASIC_VARIABLE_H
 
 #include <memory>
 
-namespace scs {
+namespace brh {
+	namespace supports {
 
 class ObjectBase
 {
@@ -55,6 +56,8 @@ class BasicVariable
 		std::unique_ptr<ObjectBase> object_;
 };
 
-} // scs
+	}
+}
 
-#endif // _SIMPLE_CPP_SUPPORTS__BASIC_VARIABLE_H
+
+#endif

@@ -1,6 +1,7 @@
 #include "basic_variable.h"
 
-namespace scs {
+namespace brh {
+	namespace supports {
 
 // ObjectBase
 ObjectBase::~ObjectBase() {}
@@ -32,4 +33,5 @@ void swap(BasicVariable& first, BasicVariable& second)
 }
 
 
-} // scs
+	}
+}
