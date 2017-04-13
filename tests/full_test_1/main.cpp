@@ -5,6 +5,7 @@
 #include <tuple>
 
 #include <brh_supports.h>
+#include <supports/enum_flag_set.h>
 
 template<class F, class...Ts, std::size_t...Is>
 void forEachInTuple(const std::tuple<Ts...> & tuple, F func, std::index_sequence<Is...>){
@@ -45,4 +46,23 @@ int main(int argc, char* argv[]) {
 	outputFunctionTest("calcLcm", std::function<int(int, int)>(calcLcm<int>), 49, 70);
 
 	outputFunctionTest("roundUpToMultiple", std::function<int(int, int)>(roundUpToMultiple<int>), 143, 70);
+
+	enum class Flags {
+		F1 = 1 << 0, // 001
+		F2 = 1 << 1, // 010
+		F3 = 1 << 2  // 100
+	};
+
+
+	EnumFlagSet<Flags> flags {Flags::F3, Flags::F2};
+
+	std::cout << "Flags(F3, F2):    " << flags.getNumericEnum().getNumeric() << '\n';
+
+	flags.unset(Flags::F3);
+
+	std::cout << "Flags::unset(F3): " << flags.getNumericEnum().getNumeric() << '\n';
+
+	flags.set(Flags::F1);
+
+	std::cout << "Flags::set(F1):   " << flags.getNumericEnum().getNumeric() << '\n';
 }
