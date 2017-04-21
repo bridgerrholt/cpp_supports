@@ -1,2 +1,2 @@
-# Simple C++ Supports
+# C++ Supports
 Simple C++ support utilities (functions, classes, etc.).
