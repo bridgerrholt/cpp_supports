@@ -5,7 +5,6 @@
 #include <tuple>
 
 #include <brh_supports.h>
-#include <supports/enum_flag_set.h>
 
 template<class F, class...Ts, std::size_t...Is>
 void forEachInTuple(const std::tuple<Ts...> & tuple, F func, std::index_sequence<Is...>){
@@ -65,4 +64,17 @@ int main(int argc, char* argv[]) {
 	flags.set(Flags::F1);
 
 	std::cout << "Flags::set(F1):   " << flags.getNumericEnum().getNumeric() << '\n';
+
+
+	ErrorPair err;
+
+	if (!err) {
+		std::cout << "No error\n";
+
+		err = {"Failed..."};
+	}
+
+	if (err) {
+		std::cout << "Error: " << err.get() << '\n';
+	}
 }

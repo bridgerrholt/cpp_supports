@@ -5,6 +5,9 @@
 #include "supports/calc_gcd.h"
 #include "supports/calc_is_aligned.h"
 #include "supports/calc_lcm.h"
+#include "supports/enum_flag_set.h"
+#include "supports/error_pair.h"
+#include "supports/numeric_enum.h"
 #include "supports/round_up_to_multiple.h"
 
 #endif

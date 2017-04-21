@@ -10,6 +10,7 @@ set(SOURCE_FILES
         src/brh/supports/calc_is_aligned.h
         src/brh/supports/calc_lcm.h
         src/brh/supports/enum_flag_set.h
+        src/brh/supports/error_pair.h
         src/brh/supports/numeric_enum.h
         src/brh/supports/round_up_to_multiple.h
         src/brh/brh_supports.h)
