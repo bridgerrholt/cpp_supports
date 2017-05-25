@@ -7,6 +7,7 @@
 #include "supports/calc_lcm.h"
 #include "supports/enum_flag_set.h"
 #include "supports/error_pair.h"
+#include "supports/get_time.h"
 #include "supports/numeric_enum.h"
 #include "supports/round_up_to_multiple.h"
 
